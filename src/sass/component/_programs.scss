@@ -1,0 +1,86 @@
+.programs {
+  &__hero {
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    background: url(../../img/girl-1.png), $clr-gray-1;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    text-align: center;
+    //  padding: 15rem 0;
+
+    @include respond(phone-m) {
+      background-size: 30%;
+      background-position: 80% 15rem;
+    }
+
+    p {
+      padding: 0 5rem;
+
+      @media screen and (max-width: 610px) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__ongoing {
+  }
+
+  &__event {
+    display: grid;
+    grid-template-columns: 30rem 1fr auto;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 2rem 0;
+    margin-block-start: 3rem;
+    border-bottom: 1px solid #1c1b244d;
+    align-items: center;
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__h1 {
+    font-size: 4rem;
+  }
+
+  &__ev {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__date {
+    margin-block-start: 3rem;
+    color: #1c1b24;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+  }
+
+  &__btn {
+    font-size: $default-size;
+    background: $primary-clr-1;
+    color: $clr-white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-transform: capitalize;
+    transition: $transition;
+
+    &:hover {
+      background: #5a4fced0;
+    }
+  }
+
+  &__upcoming {
+    margin-top: 5rem;
+  }
+}

@@ -1,0 +1,44 @@
+.feature {
+  &_heading {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @include respond(phone-m) {
+      flex-direction: column;
+    }
+
+    p {
+      flex: 0 0 40%;
+    }
+  }
+
+  &_container {
+    margin-top: $mg-top-9;
+    display: flex;
+    gap: 7rem;
+
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &_info {
+    h5 {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 51px;
+        border: 3px solid $secondary-clr-1;
+        left: -3rem;
+        top: 2rem;
+
+        @include respond(mobile-lg) {
+          border-width: 1.5px;
+        }
+      }
+    }
+  }
+}

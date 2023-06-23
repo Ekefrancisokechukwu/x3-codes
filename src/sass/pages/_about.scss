@@ -1,0 +1,23 @@
+.about {
+  &__hero {
+    height: 100vh;
+    text-align: center;
+    background: $clr-gray-1;
+
+    p {
+      padding: 1rem 7rem;
+
+      @include respond(phone-m) {
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+.section-founder {
+  padding: $pd-top-sd;
+}
+
+.section-about-programs {
+  padding: $pd-top-sd;
+}

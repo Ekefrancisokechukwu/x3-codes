@@ -1,0 +1,51 @@
+.startUp {
+  &_content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      column-gap: 0px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: $mg-top-default;
+    }
+  }
+
+  &_info {
+    position: relative;
+
+    img {
+      width: 72.23px;
+      height: 63px;
+
+      @include respond(phone-m) {
+        width: 60px;
+        height: 40px;
+      }
+      @include respond(mobile-md) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 51px;
+      border: 3px solid $primary-clr-1;
+      left: -2rem;
+      top: 5rem;
+
+      @include respond(mobile-lg) {
+        border-width: 1.5px;
+      }
+    }
+  }
+}

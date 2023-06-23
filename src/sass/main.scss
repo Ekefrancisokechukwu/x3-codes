@@ -1,0 +1,37 @@
+// ABSTRACT FOLDER
+@import "abstract/mixins";
+@import "abstract/variables";
+
+// base folder
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+//  COMPONENTS
+@import "component/about";
+@import "component/about-programs";
+@import "component/accordion";
+@import "component/buttons";
+@import "component/career";
+@import "component/course";
+@import "component/feature";
+@import "component/form";
+@import "component/founder";
+@import "component/graduates";
+@import "component/hero";
+@import "component/programs";
+@import "component/review";
+@import "component/startUp";
+@import "component/story";
+
+// LAYOUTS
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/navigation";
+
+// PAGES
+@import "pages/about";
+@import "pages/graduates";
+@import "pages/home";
+@import "pages/programs";

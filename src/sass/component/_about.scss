@@ -1,0 +1,47 @@
+.about {
+  &_head {
+    text-align: center;
+    margin: 0 auto;
+    width: 65%;
+
+    @include respond(phone-m) {
+      width: 90%;
+    }
+    @include respond(mobile-lg) {
+      width: 100%;
+    }
+
+    p {
+      line-height: 2.1;
+    }
+  }
+
+  &_article-container {
+    margin-top: $mg-top-9;
+    // padding-top: $pd-top-bg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7rem;
+
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &_article {
+    img {
+      width: 61px;
+      height: 63px;
+
+      @include respond(phone-m) {
+        width: 50px;
+        height: 40px;
+      }
+      @include respond(mobile-md) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

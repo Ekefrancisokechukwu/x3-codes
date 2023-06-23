@@ -1,0 +1,117 @@
+.section-hero {
+  padding: $sec-pad;
+  padding-top: $pd-top-bg;
+  padding-bottom: 5rem;
+
+  @include respond(mobile-lg) {
+    padding: 0 3rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+  }
+}
+
+.section-about {
+  padding: $sec-pad;
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+  margin-top: 15rem;
+  background: $clr-gray-1;
+
+  @include respond(mobile-lg) {
+    padding: 0 3rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+    margin-top: 5rem;
+  }
+  @include respond(mobile-md) {
+    margin-top: 3rem;
+  }
+}
+
+.section-story {
+  padding: $sec-pad;
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+
+  @include respond(mobile-lg) {
+    padding: 0 3rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+  }
+}
+
+.section-course {
+  padding: $sec-pad;
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+  background: $clr-gray-1;
+
+  @include respond(mobile-lg) {
+    padding: 0 3rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+  }
+}
+
+.section-feature {
+  padding: $sec-pad;
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+
+  @include respond(mobile-lg) {
+    padding: 0 4rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+  }
+}
+
+.section-startUp {
+  padding: $sec-pad;
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+
+  @include respond(mobile-lg) {
+    padding: 0 3rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+  }
+}
+
+.section-career {
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+  background: url(../../img/Grid.jpg);
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.section-review {
+  padding-top: $pd-top-bg;
+}
+
+.section-accordion {
+  padding: $sec-pad;
+  padding-top: $pd-top-sm;
+  padding-bottom: $pd-top-sm;
+
+  @include respond(phone-m) {
+    padding: 0 1.4rem;
+    padding-top: $pd-top-sm;
+    padding-bottom: $pd-top-sm;
+  }
+}
+
+.section-form {
+  padding: $sec-pad;
+  padding-top: 8rem;
+  padding-bottom: $pd-top-sm;
+  background: $clr-gray-1;
+  position: relative;
+  z-index: 2;
+
+  @include respond(phone-m) {
+    // width: 90vw;
+    padding: 3rem;
+  }
+}

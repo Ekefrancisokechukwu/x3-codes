@@ -1,0 +1,7 @@
+.section-programs {
+  padding: 7rem 10rem;
+
+  @include respond(mobile-md) {
+    padding: 7rem 5rem;
+  }
+}

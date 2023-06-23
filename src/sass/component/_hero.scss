@@ -1,0 +1,33 @@
+.hero {
+  display: flex;
+  gap: 4rem;
+
+  @include respond(tablet) {
+    // display: block;
+    align-items: center;
+    flex-direction: column;
+    gap: 16rem;
+  }
+
+  &_info {
+    h5 {
+      font-size: $default-size;
+      font-weight: 500;
+    }
+  }
+
+  &_text {
+    margin-top: $mg-top-default;
+  }
+
+  &_btn-container {
+    display: flex;
+    gap: 5rem;
+    margin-top: $mg-top-default;
+  }
+
+  &_img-box {
+    flex: 0 0 45rem;
+    position: relative;
+  }
+}

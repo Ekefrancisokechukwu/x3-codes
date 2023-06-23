@@ -1,0 +1,354 @@
+.heading-primary {
+  color: $clr-dark-blue;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 65px;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  @include respond(tab-land) {
+    font-size: 55px;
+  }
+
+  @media screen and (max-width: 1048px) {
+    font-size: 30px;
+  }
+
+  @include respond(mobile-lg) {
+    font-size: 25px;
+  }
+
+  span {
+    color: $primary-clr-2;
+  }
+}
+
+.heading-secondary {
+  font-size: 55px;
+  font-weight: 700;
+
+  @include respond(tab-land) {
+    font-size: 30px;
+  }
+
+  span {
+    color: $secondary-clr-1;
+  }
+}
+
+.heading-tertiary {
+  line-height: 2.5;
+  font-size: 23px;
+  text-transform: capitalize;
+
+  @include respond(mobile-lg) {
+    font-size: 15px;
+  }
+}
+
+.img-backdrop {
+  background: linear-gradient(
+    177.81deg,
+    #c6bdf5 -3.2%,
+    #9684dd 32.29%,
+    #c3b9f7 82.57%
+  );
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  z-index: -1;
+
+  @include respond(tab-land) {
+    width: 350px;
+    height: 350px;
+  }
+
+  @media screen and (max-width: 1048px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include respond(tablet) {
+    width: 320px;
+    height: 320px;
+  }
+  @include respond(phone-m) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include respond(mobile-lg) {
+    width: 250px;
+    height: 250px;
+  }
+
+  &--main {
+    border-radius: 50%;
+    top: -9rem;
+    left: 10rem;
+  }
+}
+
+.hero-img {
+  position: absolute;
+
+  &__home {
+    top: 1.5rem;
+    left: 36%;
+    transform: translate(-50%, 13%);
+    width: 55rem;
+
+    @media screen and (max-width: 1048px) {
+      transform: translate(-50%, 15%);
+      width: 50rem;
+    }
+
+    @include respond(tab-port) {
+      width: 50rem;
+    }
+    @include respond(tablet) {
+      width: 60rem;
+    }
+
+    @include respond(phone-m) {
+      left: 12rem;
+      top: -3rem;
+      width: 68rem;
+    }
+
+    @include respond(mobile-lg) {
+      left: 9.5rem;
+      top: -4rem;
+      width: 60rem;
+    }
+
+    @include respond(mobile-md) {
+      left: 11.3rem;
+      top: -3rem;
+      width: 50rem;
+    }
+  }
+
+  &__graduate {
+    top: 42.5%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    width: 37.8rem;
+
+    @include respond(tab-land) {
+      width: 37.7rem;
+      top: 40%;
+    }
+
+    @media screen and (max-width: 1048px) {
+      width: 35rem;
+      top: 35%;
+    }
+    @include respond(tab-port) {
+      top: 16rem;
+    }
+
+    @include respond(tablet) {
+      width: 40rem;
+      top: 18rem;
+    }
+    @include respond(phone-m) {
+      // width: 50rem;
+      top: 15.5rem;
+    }
+
+    @include respond(mobile-lg) {
+      width: 35rem;
+      top: 11.7rem;
+    }
+  }
+}
+
+.article {
+  width: 180px;
+  height: 45px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17.1289px;
+  backdrop-filter: blur(9.68154px);
+  box-shadow: 0px -0.744734px 20.1078px rgba(0, 0, 0, 0.13),
+    0px 2.97894px 20.1078px rgba(0, 0, 0, 0.15);
+  background: $clr-transpernt;
+  padding: 1rem 8px;
+
+  @media screen and (max-width: 1048px) {
+    width: 160px;
+    height: 38px;
+  }
+
+  @include respond(tab-port) {
+    width: 135px;
+  }
+
+  @include respond(tablet) {
+    width: 140px;
+    height: 35px;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 120px;
+    height: 30px;
+  }
+
+  @include respond(phone-m) {
+    width: 140px;
+    height: 40px;
+  }
+
+  @include respond(mobile-lg) {
+    width: 120px;
+    height: 30px;
+  }
+
+  &_box-1 {
+    top: 14rem;
+    right: -3rem;
+
+    @media screen and (max-width: 1048px) {
+      top: 9rem;
+      right: -1.8rem;
+    }
+
+    @include respond(tablet) {
+      top: 14rem;
+      right: -5rem;
+    }
+
+    @media screen and (max-width: 750px) {
+      top: 14rem;
+      right: -1rem;
+    }
+
+    @include respond(phone-m) {
+      top: 25rem;
+      right: -8rem;
+    }
+    @include respond(mobile-lg) {
+      right: -3rem;
+      top: 20rem;
+    }
+    @include respond(mobile-sm) {
+      right: -1rem;
+      top: 20rem;
+    }
+  }
+
+  &_box-2 {
+    top: 25rem;
+    left: -3rem;
+
+    @media screen and (max-width: 1048px) {
+      top: 18rem;
+    }
+
+    @include respond(tablet) {
+      top: 24rem;
+      left: -6rem;
+    }
+
+    @media screen and (max-width: 750px) {
+      top: 24rem;
+      left: -2rem;
+    }
+
+    @include respond(phone-m) {
+      top: 14rem;
+      left: -7rem;
+    }
+
+    @include respond(mobile-md) {
+      left: -3rem;
+    }
+
+    @include respond(mobile-sm) {
+      left: -2rem;
+    }
+  }
+
+  &_vector1 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.23);
+    display: grid;
+    place-content: center;
+
+    @media screen and (max-width: 1048px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    img {
+      width: 14.89px;
+
+      @media screen and (max-width: 1048px) {
+        width: 12px;
+      }
+    }
+  }
+
+  span {
+    font-size: 13.41px;
+    color: #0000009e;
+    font-weight: 500;
+    width: 100px;
+
+    @media screen and (max-width: 1048px) {
+      width: 85px;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 750px) {
+      font-size: 10px;
+    }
+    @include respond(mobile-lg) {
+      left: 32%;
+    }
+  }
+
+  &_vector2 {
+    width: 11px;
+
+    img {
+      width: 5px;
+    }
+  }
+}
+
+.scroll-btn {
+  // position: fixed;
+  background: $primary-clr-1;
+  display: grid;
+  // justify-content: end;
+  place-items: center;
+  width: 4rem;
+  margin-left: auto;
+  margin-right: 10rem;
+  margin-bottom: 2rem;
+  height: 4rem;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: $clr-white;
+  bottom: 5rem;
+  z-index: 33;
+  right: 14rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-clr-2;
+  }
+}
+
+.scroll-btn.fixed {
+  position: fixed;
+  right: 0rem;
+}

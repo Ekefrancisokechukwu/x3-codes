@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem 7rem;
+  width: 100%;
+  background: #ffffff;
+
+  @include respond(mobile-lg) {
+    padding: 2.3rem 5rem;
+  }
+
+  @include respond(mobile-md) {
+    padding: 2.3rem 3rem;
+  }
+
+  &_logo {
+    width: 13rem;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+    width: 50px;
+    height: 30px;
+    background: #edf2fa;
+    place-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(35px);
+    border-radius: 16px;
+
+    @include respond(tab-port) {
+      display: grid;
+    }
+
+    @include respond(mobile-lg) {
+      width: 45px;
+      height: 25px;
+    }
+
+    span {
+      display: block;
+      width: 3.4rem;
+      height: 3px;
+      border-radius: 30px;
+      background: $clr-dark-blue;
+
+      &:not(:last-child) {
+        margin-block-end: 4px;
+      }
+
+      @include respond(mobile-lg) {
+        width: 3rem;
+        height: 2px;
+      }
+    }
+
+    &:hover span {
+    }
+  }
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  // backdrop-filter: blur(30px);
+
+  border-bottom: 1px solid #cccccc58;
+  box-shadow: 0px -4px 7px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  //  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  //     -webkit-backdrop-filter: blur(10px);
+  //     // backdrop-filter: blur(10px);
+  //     // background-color: rgba($color-black, .3);
+  // }
+}

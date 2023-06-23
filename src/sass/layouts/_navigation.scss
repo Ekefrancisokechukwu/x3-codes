@@ -1,0 +1,151 @@
+.navigation {
+  //  position: relative !important;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 15rem;
+
+  @include respond(tab-land) {
+    gap: 10rem;
+  }
+
+  @include respond(tab-port) {
+    position: fixed;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    background: $clr-white;
+    border-radius: 10px;
+    width: 50rem;
+    height: 80vh;
+    z-index: 5;
+    gap: 0;
+    padding: 3rem 5rem;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @include respond(mobile-lg) {
+    width: 40rem;
+  }
+  @include respond(mobile-sm) {
+    width: 35rem;
+  }
+
+  button {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__close {
+    display: none;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      display: block;
+      font-size: 4rem;
+      position: absolute;
+      right: 5rem;
+      top: 3rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+
+    @include respond(tab-land) {
+      gap: 6rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 10rem;
+      align-items: start;
+      flex-direction: column;
+      gap: 5rem;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @include respond(tab-port) {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &__link,
+  &:link,
+  &:visited {
+    color: $clr-black;
+    transition: $transition;
+    font-weight: 400;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.7rem;
+
+    @include respond(tablet) {
+      font-size: 2.4rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2.3rem;
+      gap: 5rem;
+      width: 100%;
+    }
+
+    &:hover {
+      color: $primary-clr-1;
+    }
+  }
+}
+
+.navigation.visible {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  opacity: 1;
+}
+
+.nav_background {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    backdrop-filter: blur(2px);
+    // background: #0000006b;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+}
+
+.navigation__link.active {
+  color: $primary-clr-1;
+}
+
+.nav_background.visible {
+  visibility: visible;
+  opacity: 1;
+}

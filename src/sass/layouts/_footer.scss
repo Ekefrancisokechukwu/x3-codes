@@ -1,0 +1,105 @@
+.footer {
+  padding-top: 5rem;
+  border-top: 1px solid #00000026;
+  position: relative;
+
+  &__container {
+    width: 93%;
+    margin: 0 auto;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    gap: 1rem;
+
+    @include respond(mobile-md) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  &__lists-link {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 70%;
+    gap: 2rem;
+
+    @include respond(mobile-lg) {
+      flex: 0 0 80%;
+    }
+  }
+
+  &__logo {
+    width: 10rem;
+    align-self: flex-start;
+  }
+
+  &__listHead {
+    font-size: 1.8rem;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__link {
+    color: rgba(0, 0, 0, 0.78);
+    text-transform: capitalize;
+    position: relative;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $primary-clr-1;
+    }
+  }
+
+  &__media-content {
+    width: 73%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    padding: 2rem 0.3rem;
+
+    @include respond(mobile-md) {
+      width: 100%;
+      gap: 4rem;
+      justify-content: center;
+    }
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $clr-black;
+
+      @include respond(mobile-md) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 2rem;
+    background: $clr-gray-1;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,179 @@
+.career {
+  width: 90%;
+  margin: 0 auto;
+  background: $clr-white;
+  border-radius: 19px;
+  box-shadow: $shadow-light;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+
+  @include respond(tab-land) {
+    padding-left: 1rem;
+  }
+
+  h1 {
+    padding-left: 1.8rem;
+  }
+  @include respond(tablet) {
+    padding: 3rem;
+  }
+  @include respond(mobile-lg) {
+    padding: 3rem 1rem;
+  }
+
+  &_container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: $mg-top-default;
+    gap: 5rem;
+
+    @include respond(tab-land) {
+      padding: 2rem;
+    }
+
+    @include respond(tablet) {
+      flex-direction: column;
+    }
+
+    @include respond(mobile-sm) {
+      padding: 1rem;
+    }
+  }
+
+  &_carousel {
+    width: 130rem;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 180rem;
+      height: 40rem;
+      padding: 5rem;
+      align-items: center;
+    }
+    @include respond(tablet) {
+      width: 100%;
+      height: 55rem;
+    }
+    @include respond(mobile-lg) {
+      top: 0;
+      height: 30rem;
+    }
+
+    &--img {
+      min-width: 40rem;
+      height: 300px;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      opacity: 0;
+      transition: all 0.3s;
+      border-radius: 12px;
+      overflow: hidden;
+
+      @include respond(tab-land) {
+        height: 35rem;
+      }
+
+      @include respond(tablet) {
+        width: 100%;
+        height: 290px;
+        top: 4rem;
+      }
+
+      @include respond(mobile-lg) {
+        top: 0;
+        height: 30rem;
+      }
+
+      img {
+        object-fit: cover;
+        border-radius: 12px;
+        transform: scale(1.06);
+        transition: $transition;
+      }
+
+      &:hover img {
+        transform: scale(1);
+      }
+
+      &:nth-child(1) {
+        div {
+          background: linear-gradient(
+            89.18deg,
+            #2d74de 8.9%,
+            rgba(45, 116, 222, 0) 202.47%
+          );
+        }
+      }
+      &:nth-child(2) {
+        div {
+          background: linear-gradient(
+            90deg,
+            #e3b13c 0%,
+            rgba(201, 162, 82, 0) 158.75%
+          );
+        }
+      }
+
+      &:nth-child(3) {
+        div {
+          background: linear-gradient(
+            89.51deg,
+            #916cf6 3.11%,
+            rgba(145, 108, 246, 0) 136.32%
+          );
+        }
+      }
+      &:nth-child(4) {
+        div {
+          background: linear-gradient(
+            91.22deg,
+            #6eeae1 1.13%,
+            rgba(107, 227, 218, 0.29) 106.39%
+          );
+        }
+      }
+      &:nth-child(5) {
+        div {
+          background: linear-gradient(90deg, #343052 0%, #3430526f 158.75%);
+        }
+      }
+
+      &__Overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 12px;
+        display: grid;
+        place-content: center;
+
+        h2 {
+          font-size: 4rem;
+          color: $clr-white;
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+    }
+
+    &--img.active {
+      transform: translate(0);
+      opacity: 1;
+    }
+    &--img.nextSlide {
+      transform: translateX(100%);
+    }
+    &--img.lastSlide {
+      transform: translateX(-100%);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.about-programs {
+  width: 85%;
+  margin: 0 auto;
+
+  @include respond(mobile-lg) {
+    width: 100%;
+  }
+
+  &__head {
+    text-align: center;
+
+    p {
+      margin: 3.5rem 0;
+    }
+  }
+
+  &__cardBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5rem;
+    width: 100%;
+  }
+
+  &__card {
+    background: $clr-gray-1;
+    padding: 2rem 1.8rem;
+    flex: 0 0 30rem;
+    border: 0.873563px solid rgba(28, 27, 36, 0.25);
+    border-radius: 5.24138px;
+    text-align: center;
+    transition: $transition;
+
+    &:hover {
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    h3 {
+      font-size: 2.3rem;
+    }
+
+    p {
+      color: #1c1b24;
+      margin: 2.3rem 0;
+    }
+  }
+
+  &__btn {
+    font-size: 15px;
+    background: $primary-clr-1;
+    color: $clr-white;
+    text-transform: capitalize;
+    display: inline-block;
+    place-items: center;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 6px;
+    align-self: center;
+    transition: $transition;
+
+    &:hover {
+      background: #5a4fcede;
+    }
+  }
+}

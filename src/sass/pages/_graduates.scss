@@ -1,0 +1,16 @@
+.section-graduate {
+  padding: 0 14rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+
+  @include respond(phone-m) {
+    padding: $sec-pad;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+  @include respond(mobile-md) {
+    padding: 0 5rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+}

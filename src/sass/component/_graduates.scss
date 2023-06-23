@@ -1,0 +1,72 @@
+.graduate {
+  display: flex;
+  flex-wrap: wrap;
+  // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr) );
+  grid-template-rows: auto;
+  gap: 5rem;
+  justify-content: space-around;
+
+  &__hero {
+    background: url(../../img/SVG/grad.svg);
+    background-color: $clr-gray-1;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  &__item {
+    background: $clr-gray-1;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    transition: $transition;
+
+    &:hover {
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+  }
+
+  &__img {
+    width: 15rem;
+    height: 15rem;
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+  }
+
+  &__proffesion {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-block-start: 1rem;
+    font-size: 1.3rem;
+
+    a {
+      font-size: 1.3rem;
+      color: #333;
+      transition: $transition;
+
+      &:hover {
+        color: $primary-clr-1;
+      }
+    }
+  }
+}

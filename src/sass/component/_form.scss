@@ -1,0 +1,132 @@
+.form {
+  width: 70%;
+  margin: 5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  background: $clr-white;
+  padding: 8rem 4rem;
+  border-radius: 10px;
+  border: 1px solid $clr-black;
+  position: relative;
+  // z-index:2;
+
+  @include respond(tab-land) {
+    justify-content: space-between;
+  }
+
+  @include respond(tablet) {
+    width: 100%;
+    justify-content: space-between;
+  }
+  @include respond(mobile-lg) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $primary-clr-1;
+    border-radius: 10px;
+    transform: matrix(1, -0.04, 0.03, 1, 0, 0);
+    z-index: -1;
+  }
+
+  &__heading {
+    text-align: center;
+    width: 45vw;
+    margin: 0 auto;
+
+    @include respond(phone-m) {
+      width: 90vw;
+    }
+    @include respond(mobile-lg) {
+      text-align: start;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.58rem;
+    position: relative;
+
+    @include respond(tab-land) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: 610px) {
+      width: 40%;
+    }
+
+    @include respond(mobile-lg) {
+      width: 100%;
+    }
+
+    &--btn {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      // justify-self: center;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &--textarea {
+      width: 100%;
+
+      textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 10px;
+        outline: 0;
+        padding: 1rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__input {
+    padding: 1.5rem;
+    width: 35rem;
+    border: 1px solid $clr-black;
+    border-radius: 10px;
+    font-size: $default-size;
+    color: $clr-black;
+
+    &:focus {
+      border: 1px solid $clr-black;
+      outline: 0;
+    }
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+    @media screen and (max-width: 610px) {
+      width: 100%;
+    }
+  }
+}

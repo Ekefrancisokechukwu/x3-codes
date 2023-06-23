@@ -1,0 +1,46 @@
+
+// COLORS 
+
+$primary-clr-1:#594FCE;
+$primary-clr-2:#6457CD;
+$primary-clr-3:#5D97E6;
+
+$linear-grad-btn: linear-gradient(to right bottom,#594FCE, #5D97E6);
+
+$secondary-clr-1:#60CDF8;
+$secondary-clr-2:#A59EFA;
+
+$secondary-clr-gold:#d8a93e;
+
+$clr-white:#ffff;
+$clr-gray-1:#f7f9fc;
+$clr-transpernt:rgba(255, 255, 255, 0.19);
+
+$clr-black:#000000;
+$clr-dark-blue:#1C1B24;
+
+
+// TRANSITION 
+ $transition: all .3s ease-in-out;
+
+// FONT SIZE
+  $default-size:14px;
+  $btn-size:1.3rem;
+
+// FONT WEIGHT
+  $light-wight:600;
+
+// PADDING
+ $pd-top-bg:9rem;
+ $pd-top-sm:50px;
+ $sec-pad:0 7.8rem;
+ $pd-top-sd:10rem 3rem;
+
+
+
+// MARGINS
+  $mg-top-default:3rem;
+  $mg-top-9:9rem;
+
+// SHADOWS
+ $shadow-light:0px -4px 7px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.15);

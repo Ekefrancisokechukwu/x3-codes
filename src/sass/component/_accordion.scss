@@ -1,0 +1,83 @@
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+
+  @include respond(phone-m) {
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    @include respond(phone-m) {
+      text-align: center;
+    }
+  }
+
+  &__container {
+    padding: 1rem;
+
+    @include respond(phone-m) {
+      width: 100%;
+    }
+  }
+
+  &__question {
+    border: 1px solid #5c5a5a;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 60rem;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include respond(phone-m) {
+      width: 100%;
+    }
+
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // margin-block-end: 2rem;
+      padding: 0.5rem 0;
+      font-size: 2rem;
+
+      @include respond(mobile-sm) {
+        font-size: 1.5rem;
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        font-size: 2.5rem;
+        background: none;
+        outline: none;
+
+        .btn-icon {
+          transition: $transition;
+        }
+
+        .btn-active {
+          transition: $transition;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__info {
+    // margin-block-start: 1rem;
+    height: 0;
+    transition: $transition;
+    overflow: hidden;
+
+    p {
+      line-height: 1.5;
+      // max-height: 0;
+      transition: $transition;
+    }
+  }
+}

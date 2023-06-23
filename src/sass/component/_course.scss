@@ -1,0 +1,77 @@
+.course {
+  &_heading {
+    p {
+      width: 89%;
+    }
+  }
+
+  &_container {
+    margin-top: $mg-top-9;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+    column-gap: 0.8rem;
+  }
+
+  &_info {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    width: 527.5px;
+
+    @include respond(tab-land) {
+      width: 350px;
+    }
+
+    @include respond(tablet) {
+      width: 100%;
+    }
+    @include respond(mobile-md) {
+      gap: 1rem;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+
+      @include respond(mobile-md) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    a,
+    h6 {
+      font-size: 23px;
+      font-weight: 600;
+      transition: $transition;
+
+      @include respond(tab-land) {
+        font-size: 14px;
+      }
+
+      @include respond(phone-m) {
+        font-size: 11px;
+      }
+
+      &:hover {
+        color: $primary-clr-1;
+      }
+    }
+
+    p {
+      margin-left: auto;
+      font-size: 18px;
+
+      @include respond(tab-land) {
+        font-size: 13px;
+      }
+
+      @include respond(phone-m) {
+        font-size: 9px;
+      }
+    }
+  }
+}
